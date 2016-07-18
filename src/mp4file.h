@@ -854,6 +854,8 @@ public:
     MP4Atom* AddDescendantAtoms(
         MP4Atom* pAncestorAtom,
         const char* childName);
+    
+    MP4Atom* GetRootAtom() { return m_pRootAtom; }
 
 protected:
     void Init();

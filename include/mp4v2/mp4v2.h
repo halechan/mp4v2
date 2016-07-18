@@ -65,6 +65,7 @@ extern "C" {
 #include <mp4v2/itmf_tags.h>
 #include <mp4v2/streaming.h>
 #include <mp4v2/isma.h>
+#include <mp4v2/atom.h>
 
 /*****************************************************************************/
 

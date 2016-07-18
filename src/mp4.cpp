@@ -4659,6 +4659,131 @@ bool MP4SetTrackDurationPerChunk(
 
     return false;
 }
+    
+MP4AtomHandle MP4GetRootAtom(MP4FileHandle hFile)
+{
+    if (!MP4_IS_VALID_FILE_HANDLE(hFile)) {
+        return NULL;
+    }
+    
+    try {
+        ASSERT(hFile);
+        return ((MP4File*)hFile)->GetRootAtom();
+    } catch (Exception* x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    return NULL;
+}
+
+const char * MP4GetTypeOfAtom(MP4AtomHandle atom)
+{
+    if (!atom) {
+        return NULL;
+    }
+    
+    try {
+        return ((MP4Atom *)atom)->GetType();
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    return NULL;
+}
+
+uint64_t MP4GetSizeOfAtom(MP4AtomHandle atom)
+{
+    if (!atom) {
+        return 0;
+    }
+    
+    try {
+        return ((MP4Atom *)atom)->GetSize();
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    return 0;
+}
+
+void * MP4GetRawBytesOfAtom(MP4AtomHandle hAtom)
+{
+    if (!hAtom) {
+        return NULL;
+    }
+    
+    try {
+        MP4Atom *atom = (MP4Atom *)hAtom;
+        MP4File *file = &atom->GetFile();
+        
+        uint64_t pos = atom->GetStart();
+        uint64_t end = atom->GetEnd();
+        uint64_t size = end - pos;
+        
+        unsigned char *buf = (unsigned char *)malloc(size);
+        
+        file->SetPosition(pos, NULL);
+        file->ReadBytes(buf, size, NULL);
+        
+        return buf;
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    return NULL;
+}
+
+uint32_t MP4GetNumberOfChildAtoms(MP4AtomHandle atom)
+{
+    if (!atom) {
+        return 0;
+    }
+    
+    try {
+        return ((MP4Atom *)atom)->GetNumberOfChildAtoms();
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    return 0;
+}
+
+MP4AtomHandle MP4GetChildAtomAtIndex(MP4AtomHandle atom, unsigned index)
+{
+    if (!atom) {
+        return NULL;
+    }
+    
+    try {
+        return ((MP4Atom *)atom)->GetChildAtom(index);
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    return NULL;
+}
+
+MP4AtomHandle MP4GetParentAtom(MP4AtomHandle atom)
+{
+    if (!atom) {
+        return NULL;
+    }
+    
+    try {
+        return ((MP4Atom *)atom)->GetParentAtom();
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    return NULL;
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 

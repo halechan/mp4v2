@@ -116,4 +116,6 @@ DerivedData
 .DS_Store
 xcuserdata
 
+#Xcode
+Headers
 

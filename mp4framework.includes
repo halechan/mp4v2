@@ -1,0 +1,13 @@
+include/mp4v2
+libplatform
+libplatform/io
+libplatform/number
+libplatform/process
+libplatform/prog
+libplatform/sys
+libplatform/time
+libutil
+src
+src/bmff
+src/itmf
+src/qtff

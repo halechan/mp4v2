@@ -4693,14 +4693,15 @@ const char * MP4GetTypeOfAtom(MP4AtomHandle atom)
     return NULL;
 }
 
-uint64_t MP4GetSizeOfAtom(MP4AtomHandle atom)
+uint64_t MP4GetSizeOfAtom(MP4AtomHandle hAtom)
 {
-    if (!atom) {
+    if (!hAtom) {
         return 0;
     }
     
     try {
-        return ((MP4Atom *)atom)->GetSize();
+        MP4Atom * atom = (MP4Atom *)hAtom;
+        return (atom->GetEnd() - atom->GetStart());
     } catch (Exception *x) {
         mp4v2::impl::log.errorf(*x);
         delete x;
@@ -4709,7 +4710,7 @@ uint64_t MP4GetSizeOfAtom(MP4AtomHandle atom)
     return 0;
 }
 
-void * MP4GetRawBytesOfAtom(MP4AtomHandle hAtom)
+void * MP4CopyRawBytesOfAtom(MP4AtomHandle hAtom, size_t *count)
 {
     if (!hAtom) {
         return NULL;
@@ -4726,12 +4727,20 @@ void * MP4GetRawBytesOfAtom(MP4AtomHandle hAtom)
         unsigned char *buf = (unsigned char *)malloc(size);
         
         file->SetPosition(pos, NULL);
-        file->ReadBytes(buf, size, NULL);
+        file->ReadBytes(buf, (uint32_t)size, NULL);
+        
+        if (count) {
+            *count = size;
+        }
         
         return buf;
     } catch (Exception *x) {
         mp4v2::impl::log.errorf(*x);
         delete x;
+    }
+    
+    if (count) {
+        *count = 0;
     }
     
     return NULL;

@@ -231,16 +231,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		29741E3B1D3DDEF500BCF4E5 /* src */ = {
+		29741E3B1D3DDEF500BCF4E5 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
 				29741F1A1D3DE5A300BCF4E5 /* Headers */,
 				29741F131D3DE26400BCF4E5 /* include */,
 			);
-			name = src;
+			name = Headers;
 			sourceTree = "<group>";
 		};
-		29741F121D3DE1F900BCF4E5 /* csrc */ = {
+		29741F121D3DE1F900BCF4E5 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				29741ED71D3DE0F000BCF4E5 /* typebmff.cpp */,
@@ -347,15 +347,15 @@
 				29741E411D3DDFFA00BCF4E5 /* File.cpp */,
 				29741E3F1D3DDFDF00BCF4E5 /* File_posix.cpp */,
 			);
-			name = csrc;
+			name = src;
 			sourceTree = "<group>";
 		};
 		29D31A171D38D3960035A75A = {
 			isa = PBXGroup;
 			children = (
 				29741F1C1D3DE8B300BCF4E5 /* mp4v2.pch */,
-				29741F121D3DE1F900BCF4E5 /* csrc */,
-				29741E3B1D3DDEF500BCF4E5 /* src */,
+				29741F121D3DE1F900BCF4E5 /* src */,
+				29741E3B1D3DDEF500BCF4E5 /* Headers */,
 				29D31A211D38D3960035A75A /* Products */,
 			);
 			sourceTree = "<group>";

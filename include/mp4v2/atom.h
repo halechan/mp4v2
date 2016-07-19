@@ -21,7 +21,7 @@ MP4V2_EXPORT
 uint64_t MP4GetSizeOfAtom(MP4AtomHandle atom);
 
 MP4V2_EXPORT
-void * MP4GetRawBytesOfAtom(MP4AtomHandle atom);
+void * MP4CopyRawBytesOfAtom(MP4AtomHandle atom, size_t *count);
 
 MP4V2_EXPORT
 uint32_t MP4GetNumberOfChildAtoms(MP4AtomHandle atom);

@@ -4793,6 +4793,152 @@ MP4AtomHandle MP4GetParentAtom(MP4AtomHandle atom)
     
     return NULL;
 }
+    
+    
+uint32_t MP4GetNumberOfPropertiesOfAtom(MP4AtomHandle atom)
+{
+    if (!atom) {
+        return 0;
+    }
+    
+    try {
+        return ((MP4Atom *)atom)->GetCount();
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    return 0;
+}
+
+
+MP4PropertyHandle MP4GetPropertyOfAtomAtIndex(MP4AtomHandle atom, unsigned index)
+{
+    if (!atom) {
+        return NULL;
+    }
+    
+    try {
+        return ((MP4Atom *)atom)->GetProperty(index);
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    return NULL;
+}
+
+
+const char * MP4GetNameOfProperty(MP4PropertyHandle hProperty)
+{
+    if (!hProperty) {
+        return NULL;
+    }
+    
+    try {
+        MP4Property *property = (MP4Property *)hProperty;
+        return property->GetName();
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    return NULL;
+}
+
+
+const char * MP4CopyDescriptionOfProperty(MP4PropertyHandle hProperty, size_t *count)
+{
+    if (!hProperty) {
+        return NULL;
+    }
+    
+    try {
+        MP4Property *property = (MP4Property *)hProperty;
+        MP4PropertyType type = property->GetType();
+        char *buf = (char *)malloc(1024);
+        memset(buf, 0, 1024);
+        uint32_t len = 0;
+        switch (type) {
+            case Integer8Property:
+            case Integer16Property:
+            case Integer24Property:
+            case Integer32Property:
+            case Integer64Property: {
+                MP4IntegerProperty *iProperty = (MP4IntegerProperty *)property;
+                uint32_t count = iProperty->GetCount();
+                for (uint32_t i = 0; i < count; i++) {
+                    if (i != 0) {
+                        len += snprintf(buf+len, 1024-len, ",");
+                    }
+                    uint64_t value = iProperty->GetValue(i);
+                    len += snprintf(buf+len, 1024-len, "%lld", value);
+                }
+                break;
+            }
+            case Float32Property: {
+                MP4Float32Property *fProperty = (MP4Float32Property *)property;
+                uint32_t count = fProperty->GetCount();
+                for (uint32_t i = 0; i < count; i++) {
+                    if (i != 0) {
+                        len += snprintf(buf+len, 1024-len, ",");
+                    }
+                    float value = fProperty->GetValue(i);
+                    len += snprintf(buf+len, 1024-len, "%f", value);
+                }
+                break;
+            }
+            case StringProperty: {
+                MP4StringProperty *sProperty = (MP4StringProperty *)property;
+                uint32_t count = sProperty->GetCount();
+                for (uint32_t i = 0; i < count; i++) {
+                    if (i != 0) {
+                        len += snprintf(buf+len, 1024-len, ",");
+                    }
+                    const char *value = sProperty->GetValue(i);
+                    len += snprintf(buf+len, 1024-len, "%s", value);
+                }
+                break;
+            }
+            case BytesProperty: {
+                len += snprintf(buf, 1024, "[BytesProperty]");
+                break;
+            }
+            case TableProperty: {
+                len += snprintf(buf, 1024, "[TableProperty]");
+                break;
+            }
+            case DescriptorProperty: {
+                len += snprintf(buf, 1024, "[DescriptorProperty]");
+                break;
+            }
+            case LanguageCodeProperty: {
+                len += snprintf(buf, 1024, "[LanguageCodeProperty]");
+                break;
+            }
+            case BasicTypeProperty: {
+                len += snprintf(buf, 1024, "[BasicTypeProperty]");
+                break;
+            }
+            default:
+                break;
+        }
+        
+        if (count) {
+            *count = len;
+        }
+        return buf;
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    if (count) {
+        *count = 0;
+    }
+    
+    return NULL;
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 

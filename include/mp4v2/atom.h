@@ -10,6 +10,7 @@
 #define MP4V2_atom_h
 
 typedef void* MP4AtomHandle;
+typedef void* MP4PropertyHandle;
 
 MP4V2_EXPORT
 MP4AtomHandle MP4GetRootAtom(MP4FileHandle hFile);
@@ -31,5 +32,17 @@ MP4AtomHandle MP4GetChildAtomAtIndex(MP4AtomHandle atom, unsigned index);
 
 MP4V2_EXPORT
 MP4AtomHandle MP4GetParentAtom(MP4AtomHandle atom);
+
+MP4V2_EXPORT
+uint32_t MP4GetNumberOfPropertiesOfAtom(MP4AtomHandle atom);
+
+MP4V2_EXPORT
+MP4PropertyHandle MP4GetPropertyOfAtomAtIndex(MP4AtomHandle atom, unsigned index);
+
+MP4V2_EXPORT
+const char * MP4GetNameOfProperty(MP4PropertyHandle property);
+
+MP4V2_EXPORT
+const char * MP4CopyDescriptionOfProperty(MP4PropertyHandle property, size_t *count);
 
 #endif /* atom_h */

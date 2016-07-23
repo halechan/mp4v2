@@ -4901,7 +4901,22 @@ const char * MP4CopyDescriptionOfProperty(MP4PropertyHandle hProperty, size_t *c
                 break;
             }
             case BytesProperty: {
-                len += snprintf(buf, 1024, "[BytesProperty]");
+                MP4BytesProperty *pProperty = (MP4BytesProperty *)property;
+                uint32_t count = pProperty->GetCount();
+                for (uint32_t pIndex = 0; pIndex < count; pIndex++) {
+                    if (pIndex != 0) {
+                        len += snprintf(buf+len, 1024-len, ", ");
+                    }
+                    
+                    uint32_t size = 0;
+                    uint8_t *bytes = pProperty->GetBytesValue(&size, pIndex);
+                    for (uint32_t bIndex = 0; bIndex < size; bIndex++) {
+                        if (bIndex != 0) {
+                            len += snprintf(buf+len, 1024-len, " ");
+                        }
+                        len += snprintf(buf + len, 1024-len, "%.2x", bytes[bIndex]);
+                    }
+                }
                 break;
             }
             case TableProperty: {

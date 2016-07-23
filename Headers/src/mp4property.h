@@ -414,6 +414,13 @@ public:
         memcpy(*ppValue, m_values[index], m_valueSizes[index]);
         *pValueSize = m_valueSizes[index];
     }
+    
+    uint8_t* GetBytesValue(uint32_t *size, uint32_t index = 0) {
+        if (size) {
+            *size = m_valueSizes[index];
+        }
+        return m_values[index];
+    }
 
     char* GetValueStringAlloc( uint32_t index = 0 ) {
         char* buf = (char*)MP4Malloc( m_valueSizes[index] + 1 );

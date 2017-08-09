@@ -1,0 +1,14 @@
+//
+//  mp4v2.pch
+//  mp4v2
+//
+//  Created by Hale Chan on 16/7/19.
+//  Copyright © 2016年 Tips4app. All rights reserved.
+//
+
+#ifndef mp4v2_pch
+#define mp4v2_pch
+
+#include <mp4v2/mp4v2.h>
+
+#endif /* mp4v2_pch */

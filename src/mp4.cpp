@@ -4846,7 +4846,6 @@ const char * MP4GetNameOfProperty(MP4PropertyHandle hProperty)
     return NULL;
 }
 
-
 const char * MP4CopyDescriptionOfProperty(MP4PropertyHandle hProperty, size_t *count)
 {
     if (!hProperty) {
@@ -4928,7 +4927,9 @@ const char * MP4CopyDescriptionOfProperty(MP4PropertyHandle hProperty, size_t *c
                 break;
             }
             case LanguageCodeProperty: {
-                len += snprintf(buf, 1024, "[LanguageCodeProperty]");
+                MP4LanguageCodeProperty *pProperty = (MP4LanguageCodeProperty *)property;
+                bmff::LanguageCode value = pProperty->GetValue();
+                len += snprintf(buf, 1024, "%s", bmff::enumLanguageCode.toString(value, true).c_str());
                 break;
             }
             case BasicTypeProperty: {
@@ -4955,6 +4956,104 @@ const char * MP4CopyDescriptionOfProperty(MP4PropertyHandle hProperty, size_t *c
     return NULL;
 }
 
+uint64_t MP4GetStartPositionOfAtom(MP4AtomHandle hAtom)
+{
+    if (!hAtom) {
+        return 0;
+    }
+    
+    try {
+        MP4Atom * atom = (MP4Atom *)hAtom;
+        return atom->GetStart();
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    return 0;
+}
+    
+#define RawBytesPageSize 4096
+
+uint32_t MP4GetNumberOfRawBytesPagesOfAtom(MP4AtomHandle hAtom)
+{
+    if (!hAtom) {
+        return 0;
+    }
+    
+    try {
+        MP4Atom * atom = (MP4Atom *)hAtom;
+        uint64_t pos = atom->GetStart();
+        uint64_t end = atom->GetEnd();
+        uint64_t size = end - pos;
+        uint64_t pages = size / RawBytesPageSize;
+        if (size % RawBytesPageSize) {
+            pages++;
+        }
+        return (uint32_t)pages;
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    return 0;
+}
+
+void * MP4CopyRawBytesPageOfAtom(MP4AtomHandle hAtom, unsigned pageIndex, size_t *count)
+{
+    if (!hAtom) {
+        return NULL;
+    }
+    
+    try {
+        MP4Atom *atom = (MP4Atom *)hAtom;
+        MP4File *file = &atom->GetFile();
+        
+        uint64_t pos = atom->GetStart();
+        uint64_t end = atom->GetEnd();
+        uint64_t size = end - pos;
+        
+        uint64_t pages = size / RawBytesPageSize;
+        if (size % RawBytesPageSize) {
+            pages++;
+        }
+        
+        if (pageIndex >= pages) {
+            if (count) {
+                *count = 0;
+            }
+            return NULL;
+        }
+        
+        uint64_t pageStartOffset = pageIndex * RawBytesPageSize;
+        uint64_t pageSize = RawBytesPageSize;
+        //最后一页
+        if ((pages - 1) == pageIndex) {
+            pageSize = size - pageStartOffset;
+        }
+        
+        unsigned char *buf = (unsigned char *)malloc(pageSize);
+        
+        file->SetPosition(pageStartOffset + pos, NULL);
+        file->ReadBytes(buf, (uint32_t)pageSize, NULL);
+        
+        if (count) {
+            *count = pageSize;
+        }
+        
+        return buf;
+    } catch (Exception *x) {
+        mp4v2::impl::log.errorf(*x);
+        delete x;
+    }
+    
+    if (count) {
+        *count = 0;
+    }
+    
+    return NULL;
+}
+    
 ///////////////////////////////////////////////////////////////////////////////
 
 } // extern "C"

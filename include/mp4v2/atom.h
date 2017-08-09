@@ -22,6 +22,15 @@ MP4V2_EXPORT
 uint64_t MP4GetSizeOfAtom(MP4AtomHandle atom);
 
 MP4V2_EXPORT
+uint64_t MP4GetStartPositionOfAtom(MP4AtomHandle atom);
+
+MP4V2_EXPORT
+uint32_t MP4GetNumberOfRawBytesPagesOfAtom(MP4AtomHandle atom);
+
+MP4V2_EXPORT
+void * MP4CopyRawBytesPageOfAtom(MP4AtomHandle atom, unsigned pageIndex, size_t *count);
+
+MP4V2_EXPORT
 void * MP4CopyRawBytesOfAtom(MP4AtomHandle atom, size_t *count);
 
 MP4V2_EXPORT

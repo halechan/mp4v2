@@ -108,6 +108,107 @@
 		29741F0C1D3DE0F000BCF4E5 /* PictureAspectRatioBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EF01D3DE0F000BCF4E5 /* PictureAspectRatioBox.cpp */; };
 		29741F0D1D3DE0F000BCF4E5 /* rtphint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EF11D3DE0F000BCF4E5 /* rtphint.cpp */; };
 		29741F0E1D3DE0F000BCF4E5 /* text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EF21D3DE0F000BCF4E5 /* text.cpp */; };
+		29956EDC1F3B08AE0017DA2A /* File_posix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E3F1D3DDFDF00BCF4E5 /* File_posix.cpp */; };
+		29956EDD1F3B08AE0017DA2A /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E411D3DDFFA00BCF4E5 /* File.cpp */; };
+		29956EDE1F3B08AE0017DA2A /* FileSystem_posix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E461D3DE03500BCF4E5 /* FileSystem_posix.cpp */; };
+		29956EDF1F3B08AE0017DA2A /* FileSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E481D3DE03500BCF4E5 /* FileSystem.cpp */; };
+		29956EE01F3B08AE0017DA2A /* random_posix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E4D1D3DE04500BCF4E5 /* random_posix.cpp */; };
+		29956EE11F3B08AE0017DA2A /* process_posix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E4F1D3DE06100BCF4E5 /* process_posix.cpp */; };
+		29956EE21F3B08AE0017DA2A /* option.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E511D3DE08C00BCF4E5 /* option.cpp */; };
+		29956EE31F3B08AE0017DA2A /* error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E521D3DE08C00BCF4E5 /* error.cpp */; };
+		29956EE41F3B08AE0017DA2A /* time_posix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E531D3DE08C00BCF4E5 /* time_posix.cpp */; };
+		29956EE51F3B08AE0017DA2A /* time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E541D3DE08C00BCF4E5 /* time.cpp */; };
+		29956EE61F3B08AE0017DA2A /* crc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E591D3DE0B400BCF4E5 /* crc.cpp */; };
+		29956EE71F3B08AE0017DA2A /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E5A1D3DE0B400BCF4E5 /* Database.cpp */; };
+		29956EE81F3B08AE0017DA2A /* other.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E5B1D3DE0B400BCF4E5 /* other.cpp */; };
+		29956EE91F3B08AE0017DA2A /* Timecode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E5C1D3DE0B400BCF4E5 /* Timecode.cpp */; };
+		29956EEA1F3B08AE0017DA2A /* TrackModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E5D1D3DE0B400BCF4E5 /* TrackModifier.cpp */; };
+		29956EEB1F3B08AE0017DA2A /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E5E1D3DE0B400BCF4E5 /* Utility.cpp */; };
+		29956EEC1F3B08AE0017DA2A /* 3gp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E651D3DE0CF00BCF4E5 /* 3gp.cpp */; };
+		29956EED1F3B08AE0017DA2A /* atom_ac3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E661D3DE0CF00BCF4E5 /* atom_ac3.cpp */; };
+		29956EEE1F3B08AE0017DA2A /* atom_amr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E671D3DE0CF00BCF4E5 /* atom_amr.cpp */; };
+		29956EEF1F3B08AE0017DA2A /* atom_avc1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E681D3DE0CF00BCF4E5 /* atom_avc1.cpp */; };
+		29956EF01F3B08AE0017DA2A /* atom_avcC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E691D3DE0CF00BCF4E5 /* atom_avcC.cpp */; };
+		29956EF11F3B08AE0017DA2A /* atom_chpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E6A1D3DE0CF00BCF4E5 /* atom_chpl.cpp */; };
+		29956EF21F3B08AE0017DA2A /* atom_colr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E6B1D3DE0CF00BCF4E5 /* atom_colr.cpp */; };
+		29956EF31F3B08AE0017DA2A /* atom_d263.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E6C1D3DE0CF00BCF4E5 /* atom_d263.cpp */; };
+		29956EF41F3B08AE0017DA2A /* atom_dac3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E6D1D3DE0CF00BCF4E5 /* atom_dac3.cpp */; };
+		29956EF51F3B08AE0017DA2A /* atom_damr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E6E1D3DE0CF00BCF4E5 /* atom_damr.cpp */; };
+		29956EF61F3B08AE0017DA2A /* atom_dref.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E6F1D3DE0CF00BCF4E5 /* atom_dref.cpp */; };
+		29956EF71F3B08AE0017DA2A /* atom_elst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E701D3DE0CF00BCF4E5 /* atom_elst.cpp */; };
+		29956EF81F3B08AE0017DA2A /* atom_enca.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E711D3DE0CF00BCF4E5 /* atom_enca.cpp */; };
+		29956EF91F3B08AE0017DA2A /* atom_encv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E721D3DE0CF00BCF4E5 /* atom_encv.cpp */; };
+		29956EFA1F3B08AE0017DA2A /* atom_free.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E731D3DE0CF00BCF4E5 /* atom_free.cpp */; };
+		29956EFB1F3B08AE0017DA2A /* atom_ftab.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E741D3DE0CF00BCF4E5 /* atom_ftab.cpp */; };
+		29956EFC1F3B08AE0017DA2A /* atom_ftyp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E751D3DE0CF00BCF4E5 /* atom_ftyp.cpp */; };
+		29956EFD1F3B08AE0017DA2A /* atom_gmin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E761D3DE0CF00BCF4E5 /* atom_gmin.cpp */; };
+		29956EFE1F3B08AE0017DA2A /* atom_hdlr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E771D3DE0CF00BCF4E5 /* atom_hdlr.cpp */; };
+		29956EFF1F3B08AE0017DA2A /* atom_hinf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E781D3DE0CF00BCF4E5 /* atom_hinf.cpp */; };
+		29956F001F3B08AE0017DA2A /* atom_hnti.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E791D3DE0CF00BCF4E5 /* atom_hnti.cpp */; };
+		29956F011F3B08AE0017DA2A /* atom_href.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E7A1D3DE0CF00BCF4E5 /* atom_href.cpp */; };
+		29956F021F3B08AE0017DA2A /* atom_mdat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E7B1D3DE0CF00BCF4E5 /* atom_mdat.cpp */; };
+		29956F031F3B08AE0017DA2A /* atom_mdhd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E7C1D3DE0CF00BCF4E5 /* atom_mdhd.cpp */; };
+		29956F041F3B08AE0017DA2A /* atom_meta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E7D1D3DE0CF00BCF4E5 /* atom_meta.cpp */; };
+		29956F051F3B08AE0017DA2A /* atom_mp4s.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E7E1D3DE0CF00BCF4E5 /* atom_mp4s.cpp */; };
+		29956F061F3B08AE0017DA2A /* atom_mp4v.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E7F1D3DE0CF00BCF4E5 /* atom_mp4v.cpp */; };
+		29956F071F3B08AE0017DA2A /* atom_mvhd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E801D3DE0CF00BCF4E5 /* atom_mvhd.cpp */; };
+		29956F081F3B08AE0017DA2A /* atom_nmhd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E811D3DE0CF00BCF4E5 /* atom_nmhd.cpp */; };
+		29956F091F3B08AE0017DA2A /* atom_ohdr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E821D3DE0CF00BCF4E5 /* atom_ohdr.cpp */; };
+		29956F0A1F3B08AE0017DA2A /* atom_pasp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E831D3DE0CF00BCF4E5 /* atom_pasp.cpp */; };
+		29956F0B1F3B08AE0017DA2A /* atom_root.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E841D3DE0CF00BCF4E5 /* atom_root.cpp */; };
+		29956F0C1F3B08AE0017DA2A /* atom_rtp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E851D3DE0CF00BCF4E5 /* atom_rtp.cpp */; };
+		29956F0D1F3B08AE0017DA2A /* atom_s263.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E861D3DE0CF00BCF4E5 /* atom_s263.cpp */; };
+		29956F0E1F3B08AE0017DA2A /* atom_sdp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E871D3DE0CF00BCF4E5 /* atom_sdp.cpp */; };
+		29956F0F1F3B08AE0017DA2A /* atom_sdtp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E881D3DE0CF00BCF4E5 /* atom_sdtp.cpp */; };
+		29956F101F3B08AE0017DA2A /* atom_smi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E891D3DE0CF00BCF4E5 /* atom_smi.cpp */; };
+		29956F111F3B08AE0017DA2A /* atom_sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E8A1D3DE0CF00BCF4E5 /* atom_sound.cpp */; };
+		29956F121F3B08AE0017DA2A /* atom_standard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E8B1D3DE0CF00BCF4E5 /* atom_standard.cpp */; };
+		29956F131F3B08AE0017DA2A /* atom_stbl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E8C1D3DE0CF00BCF4E5 /* atom_stbl.cpp */; };
+		29956F141F3B08AE0017DA2A /* atom_stdp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E8D1D3DE0CF00BCF4E5 /* atom_stdp.cpp */; };
+		29956F151F3B08AE0017DA2A /* atom_stsc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E8E1D3DE0CF00BCF4E5 /* atom_stsc.cpp */; };
+		29956F161F3B08AE0017DA2A /* atom_stsd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E8F1D3DE0CF00BCF4E5 /* atom_stsd.cpp */; };
+		29956F171F3B08AE0017DA2A /* atom_stsz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E901D3DE0CF00BCF4E5 /* atom_stsz.cpp */; };
+		29956F181F3B08AE0017DA2A /* atom_stz2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E911D3DE0CF00BCF4E5 /* atom_stz2.cpp */; };
+		29956F191F3B08AE0017DA2A /* atom_text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E921D3DE0CF00BCF4E5 /* atom_text.cpp */; };
+		29956F1A1F3B08AE0017DA2A /* atom_tfhd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E931D3DE0CF00BCF4E5 /* atom_tfhd.cpp */; };
+		29956F1B1F3B08AE0017DA2A /* atom_tkhd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E941D3DE0CF00BCF4E5 /* atom_tkhd.cpp */; };
+		29956F1C1F3B08AE0017DA2A /* atom_treftype.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E951D3DE0CF00BCF4E5 /* atom_treftype.cpp */; };
+		29956F1D1F3B08AE0017DA2A /* atom_trun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E961D3DE0CF00BCF4E5 /* atom_trun.cpp */; };
+		29956F1E1F3B08AE0017DA2A /* atom_tx3g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E971D3DE0CF00BCF4E5 /* atom_tx3g.cpp */; };
+		29956F1F1F3B08AE0017DA2A /* atom_udta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E981D3DE0CF00BCF4E5 /* atom_udta.cpp */; };
+		29956F201F3B08AE0017DA2A /* atom_url.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E991D3DE0CF00BCF4E5 /* atom_url.cpp */; };
+		29956F211F3B08AE0017DA2A /* atom_urn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E9A1D3DE0CF00BCF4E5 /* atom_urn.cpp */; };
+		29956F221F3B08AE0017DA2A /* atom_uuid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E9B1D3DE0CF00BCF4E5 /* atom_uuid.cpp */; };
+		29956F231F3B08AE0017DA2A /* atom_video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E9C1D3DE0CF00BCF4E5 /* atom_video.cpp */; };
+		29956F241F3B08AE0017DA2A /* atom_vmhd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741E9D1D3DE0CF00BCF4E5 /* atom_vmhd.cpp */; };
+		29956F251F3B08AE0017DA2A /* typebmff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741ED71D3DE0F000BCF4E5 /* typebmff.cpp */; };
+		29956F261F3B08AE0017DA2A /* cmeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741ED81D3DE0F000BCF4E5 /* cmeta.cpp */; };
+		29956F271F3B08AE0017DA2A /* descriptors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741ED91D3DE0F000BCF4E5 /* descriptors.cpp */; };
+		29956F281F3B08AE0017DA2A /* exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EDA1D3DE0F000BCF4E5 /* exception.cpp */; };
+		29956F291F3B08AE0017DA2A /* isma.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EDB1D3DE0F000BCF4E5 /* isma.cpp */; };
+		29956F2A1F3B08AE0017DA2A /* CoverArtBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EDC1D3DE0F000BCF4E5 /* CoverArtBox.cpp */; };
+		29956F2B1F3B08AE0017DA2A /* generic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EDD1D3DE0F000BCF4E5 /* generic.cpp */; };
+		29956F2C1F3B08AE0017DA2A /* Tags.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EDE1D3DE0F000BCF4E5 /* Tags.cpp */; };
+		29956F2D1F3B08AE0017DA2A /* type.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EDF1D3DE0F000BCF4E5 /* type.cpp */; };
+		29956F2E1F3B08AE0017DA2A /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EE01D3DE0F000BCF4E5 /* log.cpp */; };
+		29956F2F1F3B08AE0017DA2A /* mp4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EE11D3DE0F000BCF4E5 /* mp4.cpp */; };
+		29956F301F3B08AE0017DA2A /* mp4atom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EE21D3DE0F000BCF4E5 /* mp4atom.cpp */; };
+		29956F311F3B08AE0017DA2A /* mp4container.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EE31D3DE0F000BCF4E5 /* mp4container.cpp */; };
+		29956F321F3B08AE0017DA2A /* mp4descriptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EE41D3DE0F000BCF4E5 /* mp4descriptor.cpp */; };
+		29956F331F3B08AE0017DA2A /* mp4file_io.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EE51D3DE0F000BCF4E5 /* mp4file_io.cpp */; };
+		29956F341F3B08AE0017DA2A /* mp4file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EE61D3DE0F000BCF4E5 /* mp4file.cpp */; };
+		29956F351F3B08AE0017DA2A /* mp4info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EE71D3DE0F000BCF4E5 /* mp4info.cpp */; };
+		29956F361F3B08AE0017DA2A /* mp4property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EE81D3DE0F000BCF4E5 /* mp4property.cpp */; };
+		29956F371F3B08AE0017DA2A /* mp4track.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EE91D3DE0F000BCF4E5 /* mp4track.cpp */; };
+		29956F381F3B08AE0017DA2A /* mp4util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EEA1D3DE0F000BCF4E5 /* mp4util.cpp */; };
+		29956F391F3B08AE0017DA2A /* ocidescriptors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EEB1D3DE0F000BCF4E5 /* ocidescriptors.cpp */; };
+		29956F3A1F3B08AE0017DA2A /* odcommands.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EEC1D3DE0F000BCF4E5 /* odcommands.cpp */; };
+		29956F3B1F3B08AE0017DA2A /* qosqualifiers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EED1D3DE0F000BCF4E5 /* qosqualifiers.cpp */; };
+		29956F3C1F3B08AE0017DA2A /* coding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EEE1D3DE0F000BCF4E5 /* coding.cpp */; };
+		29956F3D1F3B08AE0017DA2A /* ColorParameterBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EEF1D3DE0F000BCF4E5 /* ColorParameterBox.cpp */; };
+		29956F3E1F3B08AE0017DA2A /* PictureAspectRatioBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EF01D3DE0F000BCF4E5 /* PictureAspectRatioBox.cpp */; };
+		29956F3F1F3B08AE0017DA2A /* rtphint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EF11D3DE0F000BCF4E5 /* rtphint.cpp */; };
+		29956F401F3B08AE0017DA2A /* text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29741EF21D3DE0F000BCF4E5 /* text.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -217,10 +318,18 @@
 		29741F131D3DE26400BCF4E5 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 		29741F1A1D3DE5A300BCF4E5 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Headers; sourceTree = "<group>"; };
 		29741F1C1D3DE8B300BCF4E5 /* mp4v2.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mp4v2.pch; sourceTree = "<group>"; };
+		29956F461F3B08AE0017DA2A /* libmp4v2_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmp4v2_iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D31A201D38D3960035A75A /* libmp4v2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmp4v2.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		29956F411F3B08AE0017DA2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29D31A1D1D38D3960035A75A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				29D31A201D38D3960035A75A /* libmp4v2.a */,
+				29956F461F3B08AE0017DA2A /* libmp4v2_iOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -371,6 +481,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		29956F421F3B08AE0017DA2A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29D31A1E1D38D3960035A75A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,6 +498,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		29956EDA1F3B08AE0017DA2A /* mp4v2_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29956F431F3B08AE0017DA2A /* Build configuration list for PBXNativeTarget "mp4v2_iOS" */;
+			buildPhases = (
+				29956EDB1F3B08AE0017DA2A /* Sources */,
+				29956F411F3B08AE0017DA2A /* Frameworks */,
+				29956F421F3B08AE0017DA2A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mp4v2_iOS;
+			productName = mp4v2;
+			productReference = 29956F461F3B08AE0017DA2A /* libmp4v2_iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		29D31A1F1D38D3960035A75A /* mp4v2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29D31A2B1D38D3960035A75A /* Build configuration list for PBXNativeTarget "mp4v2" */;
@@ -425,11 +559,120 @@
 			projectRoot = "";
 			targets = (
 				29D31A1F1D38D3960035A75A /* mp4v2 */,
+				29956EDA1F3B08AE0017DA2A /* mp4v2_iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		29956EDB1F3B08AE0017DA2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29956EDC1F3B08AE0017DA2A /* File_posix.cpp in Sources */,
+				29956EDD1F3B08AE0017DA2A /* File.cpp in Sources */,
+				29956EDE1F3B08AE0017DA2A /* FileSystem_posix.cpp in Sources */,
+				29956EDF1F3B08AE0017DA2A /* FileSystem.cpp in Sources */,
+				29956EE01F3B08AE0017DA2A /* random_posix.cpp in Sources */,
+				29956EE11F3B08AE0017DA2A /* process_posix.cpp in Sources */,
+				29956EE21F3B08AE0017DA2A /* option.cpp in Sources */,
+				29956EE31F3B08AE0017DA2A /* error.cpp in Sources */,
+				29956EE41F3B08AE0017DA2A /* time_posix.cpp in Sources */,
+				29956EE51F3B08AE0017DA2A /* time.cpp in Sources */,
+				29956EE61F3B08AE0017DA2A /* crc.cpp in Sources */,
+				29956EE71F3B08AE0017DA2A /* Database.cpp in Sources */,
+				29956EE81F3B08AE0017DA2A /* other.cpp in Sources */,
+				29956EE91F3B08AE0017DA2A /* Timecode.cpp in Sources */,
+				29956EEA1F3B08AE0017DA2A /* TrackModifier.cpp in Sources */,
+				29956EEB1F3B08AE0017DA2A /* Utility.cpp in Sources */,
+				29956EEC1F3B08AE0017DA2A /* 3gp.cpp in Sources */,
+				29956EED1F3B08AE0017DA2A /* atom_ac3.cpp in Sources */,
+				29956EEE1F3B08AE0017DA2A /* atom_amr.cpp in Sources */,
+				29956EEF1F3B08AE0017DA2A /* atom_avc1.cpp in Sources */,
+				29956EF01F3B08AE0017DA2A /* atom_avcC.cpp in Sources */,
+				29956EF11F3B08AE0017DA2A /* atom_chpl.cpp in Sources */,
+				29956EF21F3B08AE0017DA2A /* atom_colr.cpp in Sources */,
+				29956EF31F3B08AE0017DA2A /* atom_d263.cpp in Sources */,
+				29956EF41F3B08AE0017DA2A /* atom_dac3.cpp in Sources */,
+				29956EF51F3B08AE0017DA2A /* atom_damr.cpp in Sources */,
+				29956EF61F3B08AE0017DA2A /* atom_dref.cpp in Sources */,
+				29956EF71F3B08AE0017DA2A /* atom_elst.cpp in Sources */,
+				29956EF81F3B08AE0017DA2A /* atom_enca.cpp in Sources */,
+				29956EF91F3B08AE0017DA2A /* atom_encv.cpp in Sources */,
+				29956EFA1F3B08AE0017DA2A /* atom_free.cpp in Sources */,
+				29956EFB1F3B08AE0017DA2A /* atom_ftab.cpp in Sources */,
+				29956EFC1F3B08AE0017DA2A /* atom_ftyp.cpp in Sources */,
+				29956EFD1F3B08AE0017DA2A /* atom_gmin.cpp in Sources */,
+				29956EFE1F3B08AE0017DA2A /* atom_hdlr.cpp in Sources */,
+				29956EFF1F3B08AE0017DA2A /* atom_hinf.cpp in Sources */,
+				29956F001F3B08AE0017DA2A /* atom_hnti.cpp in Sources */,
+				29956F011F3B08AE0017DA2A /* atom_href.cpp in Sources */,
+				29956F021F3B08AE0017DA2A /* atom_mdat.cpp in Sources */,
+				29956F031F3B08AE0017DA2A /* atom_mdhd.cpp in Sources */,
+				29956F041F3B08AE0017DA2A /* atom_meta.cpp in Sources */,
+				29956F051F3B08AE0017DA2A /* atom_mp4s.cpp in Sources */,
+				29956F061F3B08AE0017DA2A /* atom_mp4v.cpp in Sources */,
+				29956F071F3B08AE0017DA2A /* atom_mvhd.cpp in Sources */,
+				29956F081F3B08AE0017DA2A /* atom_nmhd.cpp in Sources */,
+				29956F091F3B08AE0017DA2A /* atom_ohdr.cpp in Sources */,
+				29956F0A1F3B08AE0017DA2A /* atom_pasp.cpp in Sources */,
+				29956F0B1F3B08AE0017DA2A /* atom_root.cpp in Sources */,
+				29956F0C1F3B08AE0017DA2A /* atom_rtp.cpp in Sources */,
+				29956F0D1F3B08AE0017DA2A /* atom_s263.cpp in Sources */,
+				29956F0E1F3B08AE0017DA2A /* atom_sdp.cpp in Sources */,
+				29956F0F1F3B08AE0017DA2A /* atom_sdtp.cpp in Sources */,
+				29956F101F3B08AE0017DA2A /* atom_smi.cpp in Sources */,
+				29956F111F3B08AE0017DA2A /* atom_sound.cpp in Sources */,
+				29956F121F3B08AE0017DA2A /* atom_standard.cpp in Sources */,
+				29956F131F3B08AE0017DA2A /* atom_stbl.cpp in Sources */,
+				29956F141F3B08AE0017DA2A /* atom_stdp.cpp in Sources */,
+				29956F151F3B08AE0017DA2A /* atom_stsc.cpp in Sources */,
+				29956F161F3B08AE0017DA2A /* atom_stsd.cpp in Sources */,
+				29956F171F3B08AE0017DA2A /* atom_stsz.cpp in Sources */,
+				29956F181F3B08AE0017DA2A /* atom_stz2.cpp in Sources */,
+				29956F191F3B08AE0017DA2A /* atom_text.cpp in Sources */,
+				29956F1A1F3B08AE0017DA2A /* atom_tfhd.cpp in Sources */,
+				29956F1B1F3B08AE0017DA2A /* atom_tkhd.cpp in Sources */,
+				29956F1C1F3B08AE0017DA2A /* atom_treftype.cpp in Sources */,
+				29956F1D1F3B08AE0017DA2A /* atom_trun.cpp in Sources */,
+				29956F1E1F3B08AE0017DA2A /* atom_tx3g.cpp in Sources */,
+				29956F1F1F3B08AE0017DA2A /* atom_udta.cpp in Sources */,
+				29956F201F3B08AE0017DA2A /* atom_url.cpp in Sources */,
+				29956F211F3B08AE0017DA2A /* atom_urn.cpp in Sources */,
+				29956F221F3B08AE0017DA2A /* atom_uuid.cpp in Sources */,
+				29956F231F3B08AE0017DA2A /* atom_video.cpp in Sources */,
+				29956F241F3B08AE0017DA2A /* atom_vmhd.cpp in Sources */,
+				29956F251F3B08AE0017DA2A /* typebmff.cpp in Sources */,
+				29956F261F3B08AE0017DA2A /* cmeta.cpp in Sources */,
+				29956F271F3B08AE0017DA2A /* descriptors.cpp in Sources */,
+				29956F281F3B08AE0017DA2A /* exception.cpp in Sources */,
+				29956F291F3B08AE0017DA2A /* isma.cpp in Sources */,
+				29956F2A1F3B08AE0017DA2A /* CoverArtBox.cpp in Sources */,
+				29956F2B1F3B08AE0017DA2A /* generic.cpp in Sources */,
+				29956F2C1F3B08AE0017DA2A /* Tags.cpp in Sources */,
+				29956F2D1F3B08AE0017DA2A /* type.cpp in Sources */,
+				29956F2E1F3B08AE0017DA2A /* log.cpp in Sources */,
+				29956F2F1F3B08AE0017DA2A /* mp4.cpp in Sources */,
+				29956F301F3B08AE0017DA2A /* mp4atom.cpp in Sources */,
+				29956F311F3B08AE0017DA2A /* mp4container.cpp in Sources */,
+				29956F321F3B08AE0017DA2A /* mp4descriptor.cpp in Sources */,
+				29956F331F3B08AE0017DA2A /* mp4file_io.cpp in Sources */,
+				29956F341F3B08AE0017DA2A /* mp4file.cpp in Sources */,
+				29956F351F3B08AE0017DA2A /* mp4info.cpp in Sources */,
+				29956F361F3B08AE0017DA2A /* mp4property.cpp in Sources */,
+				29956F371F3B08AE0017DA2A /* mp4track.cpp in Sources */,
+				29956F381F3B08AE0017DA2A /* mp4util.cpp in Sources */,
+				29956F391F3B08AE0017DA2A /* ocidescriptors.cpp in Sources */,
+				29956F3A1F3B08AE0017DA2A /* odcommands.cpp in Sources */,
+				29956F3B1F3B08AE0017DA2A /* qosqualifiers.cpp in Sources */,
+				29956F3C1F3B08AE0017DA2A /* coding.cpp in Sources */,
+				29956F3D1F3B08AE0017DA2A /* ColorParameterBox.cpp in Sources */,
+				29956F3E1F3B08AE0017DA2A /* PictureAspectRatioBox.cpp in Sources */,
+				29956F3F1F3B08AE0017DA2A /* rtphint.cpp in Sources */,
+				29956F401F3B08AE0017DA2A /* text.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29D31A1C1D38D3960035A75A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -541,6 +784,46 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		29956F441F3B08AE0017DA2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = mp4v2.pch;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/include;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Headers";
+				WARNING_CFLAGS = "-Wno-c++11-narrowing";
+			};
+			name = Debug;
+		};
+		29956F451F3B08AE0017DA2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = mp4v2.pch;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/include;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Headers";
+				WARNING_CFLAGS = "-Wno-c++11-narrowing";
+			};
+			name = Release;
+		};
 		29D31A291D38D3960035A75A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -663,6 +946,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		29956F431F3B08AE0017DA2A /* Build configuration list for PBXNativeTarget "mp4v2_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29956F441F3B08AE0017DA2A /* Debug */,
+				29956F451F3B08AE0017DA2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		29D31A1B1D38D3960035A75A /* Build configuration list for PBXProject "mp4v2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
